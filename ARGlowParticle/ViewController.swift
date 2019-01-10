@@ -34,10 +34,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         hdrCamera = sceneView.pointOfView?.camera
         hdrCamera.wantsHDR = true
         
+        hdrCamera.wantsExposureAdaptation = true
         hdrCamera.exposureAdaptationBrighteningSpeedFactor = 0.4
         hdrCamera.exposureAdaptationDarkeningSpeedFactor = 0.6
-        
-        hdrCamera.wantsExposureAdaptation = true
         hdrCamera.minimumExposure = -15
         hdrCamera.maximumExposure = 15
         
